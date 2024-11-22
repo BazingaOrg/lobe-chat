@@ -69,6 +69,10 @@ const ProviderModelListSelect = memo<CustomModelSelectProps>(
       modelProviderSelectors.getEnableModelsById(provider),
       isEqual,
     );
+    if (provider === 'openai') {
+      console.log('enabledModels', enabledModels);
+      console.log('defaultEnableModel', defaultEnableModel);
+    }
 
     const showReset = !!enabledModels && !isEqual(defaultEnableModel, enabledModels);
 

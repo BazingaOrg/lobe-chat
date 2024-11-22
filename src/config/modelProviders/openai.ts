@@ -90,7 +90,7 @@ const OpenAI: ModelProviderCard = {
       description:
         'ChatGPT-4o 是一款动态模型，实时更新以保持当前最新版本。它结合了强大的语言理解与生成能力，适合于大规模应用场景，包括客户服务、教育和技术支持。',
       displayName: 'ChatGPT-4o',
-      enabled: true,
+      enabled: false,
       id: 'chatgpt-4o-latest',
       pricing: {
         input: 5,
@@ -279,6 +279,25 @@ const OpenAI: ModelProviderCard = {
         output: 2,
       },
       tokens: 4096,
+    },
+    // 这里之所以在openai的模型列表中，是因为我是用的 newapi 的接口
+    {
+      description:
+        'Claude 3.5 Sonnet 提供了超越 Opus 的能力和比 Sonnet 更快的速度，同时保持与 Sonnet 相同的价格。Sonnet 特别擅长编程、数据科学、视觉处理、代理任务。',
+      displayName: 'Claude 3.5 Sonnet',
+      enabled: true,
+      functionCall: true,
+      id: 'claude-3-5-sonnet-20241022',
+      maxOutput: 8192,
+      pricing: {
+        cachedInput: 0.3,
+        input: 3,
+        output: 15,
+        writeCacheInput: 3.75,
+      },
+      releasedAt: '2024-10-22',
+      tokens: 200_000,
+      vision: true,
     },
   ],
   checkModel: 'gpt-4o-mini',

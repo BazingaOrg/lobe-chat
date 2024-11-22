@@ -44,7 +44,8 @@ const ModelFetcher = memo<ModelFetcherProps>(({ provider }) => {
     s.useFetchProviderModelList,
     s.setModelProviderConfig,
   ]);
-  const enabledAutoFetch = useUserStore(modelConfigSelectors.isAutoFetchModelsEnabled(provider));
+  const isAutoFetchEnabled = useUserStore(modelConfigSelectors.isAutoFetchModelsEnabled(provider));
+  const enabledAutoFetch = provider === 'openai' ? true : isAutoFetchEnabled;
   const latestFetchTime = useUserStore(
     (s) => settingsSelectors.providerConfig(provider)(s)?.latestFetchTime,
   );
