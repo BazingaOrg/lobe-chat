@@ -9,9 +9,11 @@ import BedrockProvider from './bedrock';
 import CloudflareProvider from './cloudflare';
 import DeepSeekProvider from './deepseek';
 import FireworksAIProvider from './fireworksai';
+import GiteeAIProvider from './giteeai';
 import GithubProvider from './github';
 import GoogleProvider from './google';
 import GroqProvider from './groq';
+import HigressProvider from './higress';
 import HuggingFaceProvider from './huggingface';
 import HunyuanProvider from './hunyuan';
 import InternLMProvider from './internlm';
@@ -64,6 +66,7 @@ export const LOBE_DEFAULT_MODEL_LIST: ChatModelCard[] = [
   CloudflareProvider.chatModels,
   Ai360Provider.chatModels,
   SiliconCloudProvider.chatModels,
+  GiteeAIProvider.chatModels,
   UpstageProvider.chatModels,
   SparkProvider.chatModels,
   Ai21Provider.chatModels,
@@ -71,6 +74,7 @@ export const LOBE_DEFAULT_MODEL_LIST: ChatModelCard[] = [
   WenxinProvider.chatModels,
   SenseNovaProvider.chatModels,
   InternLMProvider.chatModels,
+  HigressProvider.chatModels,
 ].flat();
 
 export const DEFAULT_MODEL_PROVIDER_LIST = [
@@ -109,6 +113,8 @@ export const DEFAULT_MODEL_PROVIDER_LIST = [
   TaichuProvider,
   InternLMProvider,
   SiliconCloudProvider,
+  HigressProvider,
+  GiteeAIProvider,
 ];
 
 export const filterEnabledModels = (provider: ModelProviderCard) => {
@@ -129,9 +135,11 @@ export { default as BedrockProviderCard } from './bedrock';
 export { default as CloudflareProviderCard } from './cloudflare';
 export { default as DeepSeekProviderCard } from './deepseek';
 export { default as FireworksAIProviderCard } from './fireworksai';
+export { default as GiteeAIProviderCard } from './giteeai';
 export { default as GithubProviderCard } from './github';
 export { default as GoogleProviderCard } from './google';
 export { default as GroqProviderCard } from './groq';
+export { default as HigressProviderCard } from './higress';
 export { default as HuggingFaceProviderCard } from './huggingface';
 export { default as HunyuanProviderCard } from './hunyuan';
 export { default as InternLMProviderCard } from './internlm';
